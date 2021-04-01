@@ -238,10 +238,11 @@ def blender():
     mask = read_image(relpath(argv[3]), 1)
     mask = np.round(mask)
     mask = mask.astype(np.bool)
-    if len(argv) > 4:
-        result = blend_rgb(img1, img2, mask)
+    if len(argv) == 7:
+        result = blend_rgb(img1, img2, mask, argv[4], argv[5], argv[6])
 
-    result = blend_rgb(img1, img2, mask)
+    else:
+        result = blend_rgb(img1, img2, mask)
     plt.imshow(result, cmap='gray')
 
 
@@ -265,7 +266,7 @@ if __name__ == '__main__':
                 exit(1)
             for arg in argv[5:]:
                 if not arg.isdigit() or int(arg) % 2 != 1 or int(arg) > 13:
-                    print(f"USAGE: {arg} should be an odd integer in the range [1, 11]", file=stderr)
+                    print(f"USAGE: {arg} should be an odd integer in the range [1, 13]", file=stderr)
                     exit(1)
         blender()
         plt.show()
