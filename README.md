@@ -17,8 +17,8 @@ How to use?
     - IMAGE2PATH is the path to the second image (has to be '.jpg')
     - MASK_PATH is the path to the mask (has to be '.jpg', and black/white)
     - PARAM1 is an integer in the range [1, 11] determine the strength of the blending
-    - PARAM2 is an odd integer in the range [1, 11] determine the filter size for the images
-    - PARAM3 is an odd integer in the range [1, 11] determine the filter size for the mask
+    - PARAM2 is an odd integer in the range [1, 13] determine the filter size for the images
+    - PARAM3 is an odd integer in the range [1, 13] determine the filter size for the mask
     
     If you chose (b), the default parameter for PARAM1-3 is 3.
 3. To see some examples you can write on the command line:
